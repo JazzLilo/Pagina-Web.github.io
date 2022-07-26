@@ -1,0 +1,84 @@
+#menu-bar {
+    display: none;
+}
+
+header label {
+    float: right;
+    font-size: 28px;
+    margin: 6px 0;
+    cursor: pointer;
+    /*para que aparezca una manito cuando presionemos menu*/
+}
+
+.menu {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    /*para que ocupe el 100% del alto de la ventana*/
+    background: rgba(51, 51, 51, 0.9);
+    /*0.9 de transparencia*/
+    transition: all 0.5s;
+    /*para ver como se esta desplaando el menu*/
+    transform: translateX(-100%);
+    /*se mueve de manera horizontal */
+}
+
+.menu a {
+    display: block;
+    color: white;
+    height: 50px;
+    text-decoration: none;
+    padding: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.menu a:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+#menu-bar:checked~.menu {
+    /*cuando hagamos click seleccionamos el menu y lo mismo para desaparezca*/
+    transform: translateX(0%)
+}
+
+@media(min-width:1024px) {
+    .menu {
+        position: static;
+        width: auto;
+        height: auto;
+        transform: translateX(0%);
+        float: right;
+        display: flex;
+    }
+    .menu a {
+        border: none;
+    }
+    header label {
+        display: none;
+    }
+}
+/*Submenu*/
+.submenu{
+    position: absolute;
+    list-style: none;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 1s; 
+}
+.submenu a{
+    display: block;
+    text-decoration: none;
+    font-family: 'Open Sans';
+    background: #333;
+    
+
+}
+
+.menu .Luis:hover .submenu {
+    visibility: visible;
+    opacity: 1;
+    background: #333;
+    
+}

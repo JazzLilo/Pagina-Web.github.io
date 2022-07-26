@@ -1,0 +1,39 @@
+.contenidoNosotros{
+    position: initial;
+    margin-top: 50px;
+    display: block;
+    height: 800px;
+    width: 100%;
+    
+}
+.nosotrosTOP{
+    display: block;
+    margin: 0;
+    padding: 0;
+    height: 70%;
+    width: 100%;
+    background-image: url(../imgFormu/FondoNos.jpg );
+    background-repeat: no-repeat;
+    background-attachment: fixed;   
+    background-size: 100%;
+
+}
+.letra-top{
+    float: right;
+    border: 2px solid black;
+    margin-left: 50%;
+    margin-right: 20%;
+}
+
+
+
+
+
+.nosotrosBOT{
+    margin: 0;
+    padding: 0;
+    height: 30%;
+    width: 100%;
+    background: rgb(211, 212, 131);
+
+}

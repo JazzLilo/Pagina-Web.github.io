@@ -1,0 +1,94 @@
+/*imagen*/
+.contenido{
+    width: 100%;
+    height: 50%;
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    font-family: Arial;
+    font-size: 20px;
+    color: #fff;
+    
+}
+.centreadoTour{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.centreadoTour h1{
+    border-bottom: .5px solid white;
+    padding: 10px;
+    
+}
+.contenido video{
+    width: 100%;
+    height: 50%;
+}
+.contenido img{
+    width: 100%;
+    height: 50%;
+}
+/*Descripsion*/
+
+.Descripsion{
+    width: 100%;
+    height: 50%;
+    display: inline-block;
+    text-align: center;
+    font-family: arial;
+}
+/*texto*/
+.Descripsion .parrafotour {
+    display: inline-block;
+   
+    
+    height: 50%;
+    width: 40%;
+    font-size: 25px;
+    color: #333;
+    margin: 5% 5% 20% 5%;
+}
+/*boton*/
+.boton-solicitar{
+    text-decoration: none;
+    border-radius: 15px;
+    display: inline-block;
+    padding: 20px 15px;
+    color: white;
+    background-color: #333;
+
+}
+.boton-solicitar:hover{
+    background-color: rgb(44, 44, 44);
+
+}
+.boton-solicitar:active{
+    background-color: rgb(34, 33, 33);
+}
+
+/*galeria*/
+.Descripsion .gelria-tours{
+    margin-top: 5%;
+    margin-right: 30%;
+    margin-left: 30%;
+    height: 350px;
+    width: 40%;
+    display: inline-block;
+
+}
+.Descripsion .gelria-tours img{
+    margin-top: 10px;
+    margin-inline: 20px;
+    margin-bottom: 10px;
+    height: 110px;
+    width: 220px;
+    border-radius:15px;
+    box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, .5);
+}
+.Descripsion .gelria-tours img:hover{
+    
+    height: 118px;
+    width: 226px;
+}
+

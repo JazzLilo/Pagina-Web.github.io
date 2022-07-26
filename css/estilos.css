@@ -1,0 +1,228 @@
+    @import url(menu.css);
+    @import url(banner.css);
+    @import url(blog.css);
+    @import url(info.css);
+    @import url(galeria.css);
+    /*importamos los css*/
+    
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        /*Esto se usa para que cuando le demos un border o paddin a un elemento ese border o padding sea dentro del mismo modelo de caja y no se salga*/
+    }
+    
+    body {
+        font-family: "Lucida Sans Regular";
+    }
+    
+    header {
+        width: 100%;
+        height: 50px;
+        background: #333;
+        color: white;
+        position: fixed;
+        /*Es para que el titulo(menu) se quede pegado,no se mueva*/
+        top: 0;
+        left: 0;
+        z-index: 100;
+        /*para que este siempre por delante de los demas elementos ys sea el header que tape a los demas elementos*/
+    }
+    
+    .contenedor {
+        width: 98%;
+        margin: auto;
+    }
+    
+    h1 {
+        float: left;
+    }
+    
+    header .contenedor {
+        display: table;
+        /*para limpiar los float*/
+    }
+    
+    section {
+        width: 100%;
+        margin-bottom: 25px;
+    }
+    
+    #bienvenidos {
+        text-align: center;
+    }
+    
+    footer .contenedor {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding-bottom: 25px;
+    }
+    
+    .copy {
+        font-size: 20px;
+    }
+    
+    .sociales {
+        width: 100%;
+        text-align: center;
+        font-size: 28px;
+    }
+    
+    .sociales a {
+        color: #333;
+        text-decoration: none;
+    }
+    
+    
+    .galeria {
+        font-family: 'Franklin Gothic Medium';
+    }
+    
+    .galeria h1 {
+        text-align: center;
+        margin: 20px 0 15px 0;
+        font-weight: 300;
+    }
+    
+    .linea {
+        border-top: 5px solid #0077c0;
+        margin-bottom: 40px;
+    }
+    
+    .contenedor-imagenes {
+        display: flex;
+        width: 85%;
+        margin: auto;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        border-radius: 3px;
+    }
+    
+    .contenedor-imagenes .imagen {
+        width: 32%;
+        position: relative;
+        height: 250px;
+        margin-bottom: 5px;
+        box-shadow: 0px 0px 3px 0px rgba (0, 0, 0, .75);
+    }
+    
+    .imagen img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    
+    .overlay {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background: linear-gradient(#0077c0, transparent);
+        width: 100%;
+        height: 0;
+        overflow: hidden;
+        transition: .5s ease;
+    }
+    
+    .overlay h2 {
+        color: white;
+        font-weight: 300;
+        font-size: 30px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        text-align: center;
+        transform: translate(-50%, -50%);
+        font-style: none;
+    }
+    
+    .imagen:hover .overlay {
+        height: 100%;
+        cursor: pointer;
+    }
+    
+    .bodySaber {
+        margin: 0;
+        padding: 0;
+        background: url(../imgFormu/Fondo1.jpg) no-repeat center top;
+        background-size: cover;
+        font-family: "Segoe UI";
+    }
+    
+    .conTarjeta {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    .tarjeta {
+        height: 250px;
+        width: 250px;
+        margin: 100px 0 40px 100px;
+        -webkit-perspective: 700;
+    }
+    
+    .tar3 h1 {
+        font-family: 'Franklin Gothic Medium';
+        font-size: 25px;
+        color: white;
+    }
+    
+    .carta {
+        height: 100%;
+        width: 100%;
+        position: relative;
+        transform-style: preserve-3d;
+        transition: 2s;
+        box-shadow: 0px 0px 5px black;
+    }
+    
+    .carta:hover {
+        transform: rotateY(180deg);
+    }
+    
+    .Lado {
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+        position: absolute;
+    }
+    
+    .Frente {
+        background: crimson;
+    }
+    
+    .Atras {
+        background: #f0f0f0;
+        transform: rotateY(180deg);
+    }
+    
+    .Atras h1 {
+        font-family: 'Lucida Sans';
+        font-size: 18px;
+        text-align: center;
+    }
+    
+    img {
+        width: 100%;
+        height: 100%;
+    }
+    
+    @media(min-width:768px) {
+        .sociales {
+            width: auto;
+        }
+        footer .contenedor {
+            justify-content: space-between;
+        }
+    }
+    
+    @media(min-width:1024px) {
+        .contenedor {
+            width: 1000px;
+        }
+    }
+    
+    .overlay a {
+        color: #fff;
+        text-decoration: none;
+    }
